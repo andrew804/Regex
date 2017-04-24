@@ -49,9 +49,7 @@ public struct Options: _OptionSet {
 
 }
 
-#if os(Linux)
-    typealias _RegularExpressionOptions = RegularExpression.Options
-#elseif swift(>=3.0)
+#if swift(>=3.0)
     typealias _RegularExpressionOptions = NSRegularExpression.Options
 #else
     typealias _RegularExpressionOptions = NSRegularExpressionOptions
