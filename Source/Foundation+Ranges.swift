@@ -7,7 +7,7 @@ internal extension NSTextCheckingResult {
 #if os(Linux)
     return stride(from: 0, to: numberOfRanges, by: 1).map(range)
 #elseif swift(>=3.0)
-    return stride(from: 0, to: numberOfRanges, by: 1).map(rangeAt)
+    return stride(from: 0, to: numberOfRanges, by: 1).map(range)
 #else
     return 0.stride(to: numberOfRanges, by: 1).map(rangeAtIndex)
 #endif
